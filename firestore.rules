@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Daqui pra baixo depois colocar regras corretas de segurança
+    match /projects/{docId} {
+    	allow write: if true;
+    	allow read: if true;
+    }
+
+    match /statuses/{docId} {
+    	allow write: if true;
+    	allow read: if true;
+    }
+
+    match /tasks/{docId} {
+    	allow write: if true;
+    	allow read: if true;
+    }
+    
+    match /users/{docId} {
+    	allow write: if true;
+    	allow read: if true;
+    }
+  }
+}

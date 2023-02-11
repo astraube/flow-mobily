@@ -1,0 +1,11 @@
+{
+  "@quasar/qcalendar": {},
+  "@quasar/qmarkdown": {
+    "import_md": true,
+    "import_vmd": true
+  },
+  "@quasar/qenv": {
+    "common_root_object": "none",
+    "add_qenv_to_gitignore": true
+  }
+}
